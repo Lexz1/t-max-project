@@ -44,6 +44,7 @@ p {
     margin-bottom: 0.75rem;
     line-height: 1.1;
     justify-content: center;
+    text-align: center;
 }
 .py-1{ padding: 1.5rem; }
 .py-2{ padding: 2rem; }
@@ -83,6 +84,12 @@ p {
     background: #93cb52;
     border-radius: 32px;
 }
+#navigation ul li a:hover:not(.active){
+    background-color: 111;
+}
+.active{
+    background-color: #93cb52;
+}
 #showcase {
     background:#333 url(../strawberry.jpg) no-repeat center center/cover;
     height: 100vh;
@@ -106,17 +113,29 @@ p {
 }
 
 .items{
-    background: #ffcfcf;
+    background: #93cb52;
     display: flex;
     flex-wrap: wrap;
     padding: 1rem;
     margin: 0.5rem;
-    justify-content: center;
+    justify-content:space-around;
     
+}
+.item{
+    background-color: #333;
+    color:#fff; 
+    margin: 2rem 0;
+    text-align: center;
+}
+.item:hover{
+    border: solid #333;
+    -webkit-filter: blur(4px); 
+    filter: blur(2px);
 }
 
 #about{
     display: flex;
+     
 }
 #about div{
     flex: 1;
@@ -125,5 +144,85 @@ p {
 #about .about-img{
     background: url(../teamwork.jpg) no-repeat center center/cover;
 }
-
-
+.about-text{
+    border: solid #93cb52;
+    border-style: inset;
+}
+.p-contact{
+    text-align: center;
+}
+.contact-form{
+    box-sizing: border-box;
+    float: left;
+    width: 47.5vw;
+    margin: 0 auto;
+    border-radius: 5px;
+}
+.inpt,textarea {
+    display: block;
+    margin: 10px 0 0 0;
+    width: 100%;
+    min-height: 2em;
+    border-radius: 5px;
+}
+button{
+    margin-top: 10px;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+fieldset{
+    border: none;
+  padding: 0.5rem 0;
+}
+.mySlides {float: right;}
+img {vertical-align: middle;}
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+  }
+.text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+.dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+  
+@-webkit-keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+  
+@keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+@media only screen and (max-width: 300px) {
+    .text {font-size: 11px}
+}
